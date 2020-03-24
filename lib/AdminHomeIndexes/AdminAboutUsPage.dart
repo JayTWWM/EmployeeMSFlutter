@@ -13,8 +13,8 @@ class AdminAboutUsPage {
             ),
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-              Image.network(
-                "https://firebasestorage.googleapis.com/v0/b/employee-management-syst-530eb.appspot.com/o/EMS_main.jpg?alt=media&token=1a376682-2d66-42ba-8d91-a1681f24c29f",
+              Image.asset(
+                "assets/icon/logo.jpg",
                 width: 280,
                 height: 280,
                 color: Colors.deepPurpleAccent[200],
