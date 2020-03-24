@@ -121,8 +121,8 @@ class _MyIntroPageState extends State<MyIntroPage>
                 onTap: () {
                   done();
                 },
-                child: Image.network(
-                  "https://firebasestorage.googleapis.com/v0/b/employee-management-syst-530eb.appspot.com/o/EMS_main.jpg?alt=media&token=1a376682-2d66-42ba-8d91-a1681f24c29f",
+                child: Image.asset(
+                  "assets/icon/logo.jpg",
                   width: _width,
                   height: _height,
                 ),
