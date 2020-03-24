@@ -5,8 +5,8 @@ import 'package:table_calendar/table_calendar.dart';
 class AdminHomePage {
   static String lat = "";
   static String long = "";
-  static double long_admin = 72.8589488;
-  static double lat_admin = 19.2236949;
+  static double long_admin = {Office Lattitude};
+  static double lat_admin = {Office Longitude};
   
   static IconButton iconButton;
 
