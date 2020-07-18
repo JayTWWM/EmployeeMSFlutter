@@ -1,40 +1,32 @@
 {
-  "project_info": {
-    "project_number": "253051975234",
-    "firebase_url": "https://employee-management-syst-530eb.firebaseio.com",
-    "project_id": "employee-management-syst-530eb",
-    "storage_bucket": "employee-management-syst-530eb.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:253051975234:android:7431cd07f26df3f0399fdb",
-        "android_client_info": {
-          "package_name": "com.twwm.employee_management_system"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "253051975234-589nkfd6p40m3i44jgelh6v7gh9epq4m.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDquAfoZX8i-cIYHIXzc_1O6pddkc5v4AY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "253051975234-589nkfd6p40m3i44jgelh6v7gh9epq4m.apps.googleusercontent.com",
-              "client_type": 3
+    "project_info": {
+        "project_number": "253051975234",
+        "firebase_url": "https://employee-management-syst-530eb.firebaseio.com",
+        "project_id": "employee-management-syst-530eb",
+        "storage_bucket": "employee-management-syst-530eb.appspot.com"
+    },
+    "client": [{
+        "client_info": {
+            "mobilesdk_app_id": "1:253051975234:android:7431cd07f26df3f0399fdb",
+            "android_client_info": {
+                "package_name": "com.twwm.employee_management_system"
             }
-          ]
+        },
+        "oauth_client": [{
+            "client_id": "253051975234-589nkfd6p40m3i44jgelh6v7gh9epq4m.apps.googleusercontent.com",
+            "client_type": 3
+        }],
+        "api_key": [{
+            "current_key": "AIzaSyDquAfoZX8i-cIYHIXzc_1O6pddkc5v4AY"
+        }],
+        "services": {
+            "appinvite_service": {
+                "other_platform_oauth_client": [{
+                    "client_id": "253051975234-589nkfd6p40m3i44jgelh6v7gh9epq4m.apps.googleusercontent.com",
+                    "client_type": 3
+                }]
+            }
         }
-      }
-    }
-  ],
-  "configuration_version": "1"
+    }],
+    "configuration_version": "1"
 }

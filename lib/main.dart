@@ -1,11 +1,23 @@
+import 'dart:async';
+import 'package:admob_flutter/admob_flutter.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'Login.dart';
 import 'SignUp.dart';
 import 'AdminHome.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  FlutterError.onError = Crashlytics.instance.recordFlutterError;
+  Admob.initialize('ca-app-pub-1839108623836462~4846291249');
+  runZoned(() {
+    runApp(MyApp());
+  }, onError: Crashlytics.instance.recordError);
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -32,6 +44,9 @@ class _MyIntroPageState extends State<MyIntroPage>
   @override
   void initState() {
     super.initState();
+    OneSignal.shared.init("ad1d9c86-81cd-4c6e-bec9-510cbb1d871c");
+    OneSignal.shared
+        .setInFocusDisplayType(OSNotificationDisplayType.notification);
     getDriversList().then((results) {
       setState(() {
         querySnapshot = results;
@@ -100,9 +115,21 @@ class _MyIntroPageState extends State<MyIntroPage>
     });
   }
 
-  void done() {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => MyAdminHomePage()));
+  void done() async {
+    FirebaseUser user = await FirebaseAuth.instance.currentUser();
+    if (user == null) {
+      Fluttertoast.showToast(
+          msg: 'Please Login or Sign Up.',
+          toastLength: Toast.LENGTH_LONG,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIos: 3,
+          backgroundColor: Colors.red[100],
+          textColor: Colors.white,
+          fontSize: 16.0);
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => MyAdminHomePage()));
+    }
   }
 
   @override
@@ -121,8 +148,8 @@ class _MyIntroPageState extends State<MyIntroPage>
                 onTap: () {
                   done();
                 },
-                child: Image.network(
-                  "https://firebasestorage.googleapis.com/v0/b/employee-management-syst-530eb.appspot.com/o/EMS_main.jpg?alt=media&token=1a376682-2d66-42ba-8d91-a1681f24c29f",
+                child: Image.asset(
+                  "assets/icon/logo.jpg",
                   width: _width,
                   height: _height,
                 ),
@@ -130,7 +157,14 @@ class _MyIntroPageState extends State<MyIntroPage>
               vsync: this,
               duration: new Duration(seconds: 4),
             ),
-            adder
+            adder,
+            new Align(
+              alignment: Alignment.bottomCenter,
+              child: AdmobBanner(
+                adUnitId: 'ca-app-pub-1839108623836462/4654719552',
+                adSize: AdmobBannerSize.BANNER,
+              ),
+            ),
           ],
         ),
       ),

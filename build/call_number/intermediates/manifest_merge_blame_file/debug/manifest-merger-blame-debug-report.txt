@@ -1,0 +1,12 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ongc.callnumber" >
+4
+5    <uses-sdk android:minSdkVersion="16" />
+5-->D:\FLUTTER\.pub-cache\hosted\pub.dartlang.org\call_number-0.0.1\android\src\main\AndroidManifest.xml
+6
+7    <uses-permission android:name="android.permission.CALL_PHONE" />
+7-->D:\FLUTTER\.pub-cache\hosted\pub.dartlang.org\call_number-0.0.1\android\src\main\AndroidManifest.xml:3:5-68
+7-->D:\FLUTTER\.pub-cache\hosted\pub.dartlang.org\call_number-0.0.1\android\src\main\AndroidManifest.xml:3:22-66
+8
+9</manifest>

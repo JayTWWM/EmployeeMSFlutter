@@ -83,8 +83,8 @@ class _MyLoginPageState extends State<MyLoginPage> {
             child: Container(
                 padding: EdgeInsets.fromLTRB(5, 50, 5, 0),
                 child: Column(children: <Widget>[
-                  Image.network(
-                      "https://firebasestorage.googleapis.com/v0/b/employee-management-syst-530eb.appspot.com/o/EMS_main.jpg?alt=media&token=1a376682-2d66-42ba-8d91-a1681f24c29f",
+                  Image.asset(
+                      "assets/icon/logo.jpg",
                       width: 360,
                       height: 360),
                   emailField,
@@ -118,51 +118,6 @@ class _MyLoginPageState extends State<MyLoginPage> {
                             textColor: Colors.white,
                             fontSize: 16.0);
                       }
-                      // if (isAdmin == "true") {
-                      // try {
-                      //   AuthResult result = await _auth
-                      //       .signInWithEmailAndPassword(
-                      //           email: email, password: password)
-                      //       .whenComplete(() {
-                      //     Navigator.push(
-                      //         context,
-                      //         MaterialPageRoute(
-                      //             builder: (context) => MyAdminHomePage()));
-                      //   });
-                      // } catch (e) {
-                      //   print('JAY' + e.toString());
-                      //   Fluttertoast.showToast(
-                      //       msg: 'Login failed due to: ' + e.toString(),
-                      //       toastLength: Toast.LENGTH_LONG,
-                      //       gravity: ToastGravity.BOTTOM,
-                      //       timeInSecForIos: 3,
-                      //       backgroundColor: Colors.red[100],
-                      //       textColor: Colors.white,
-                      //       fontSize: 16.0);
-                      // }
-                      // } else {
-                      //   try {
-                      //     AuthResult result = await _auth
-                      //         .signInWithEmailAndPassword(
-                      //             email: email, password: password)
-                      //         .whenComplete(() {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => MyEmployeeHomePage()));
-                      //     });
-                      //   } catch (e) {
-                      //     print('JAY' + e.toString());
-                      //     Fluttertoast.showToast(
-                      //         msg: 'Login failed due to: ' + e.toString(),
-                      //         toastLength: Toast.LENGTH_LONG,
-                      //         gravity: ToastGravity.BOTTOM,
-                      //         timeInSecForIos: 3,
-                      //         backgroundColor: Colors.red[100],
-                      //         textColor: Colors.white,
-                      //         fontSize: 16.0);
-                      //   }
-                      // }
                     },
                   ),
                 ]))));

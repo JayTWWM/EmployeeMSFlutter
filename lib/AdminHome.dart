@@ -91,11 +91,12 @@ class _MyAdminHomePageState extends State<MyAdminHomePage> {
             setState(() {
               AdminHomePage.querySnapshot1 = results;
               if (AdminHomePage.querySnapshot1.documents.isNotEmpty) {
-                AdminHomePage.attended =
-                    (AdminHomePage.querySnapshot1.documents[0].data[email.replaceAll('.', ' ')] ==
-                            null)
-                        ? false
-                        : AdminHomePage.querySnapshot1.documents[0].data[email.replaceAll('.', ' ')];
+                AdminHomePage.attended = (AdminHomePage.querySnapshot1
+                            .documents[0].data[email.replaceAll('.', ' ')] ==
+                        null)
+                    ? false
+                    : AdminHomePage.querySnapshot1.documents[0]
+                        .data[email.replaceAll('.', ' ')];
               } else {
                 AdminHomePage.attended = false;
               }
@@ -109,10 +110,12 @@ class _MyAdminHomePageState extends State<MyAdminHomePage> {
       setState(() {
         AdminHomePage.querySnapshot1 = results;
         if (AdminHomePage.querySnapshot1.documents.isNotEmpty) {
-          AdminHomePage.attended =
-              (AdminHomePage.querySnapshot1.documents[0].data[email.replaceAll('.', ' ')] == null)
-                  ? false
-                  : AdminHomePage.querySnapshot1.documents[0].data[email.replaceAll('.', ' ')];
+          AdminHomePage.attended = (AdminHomePage.querySnapshot1.documents[0]
+                      .data[email.replaceAll('.', ' ')] ==
+                  null)
+              ? false
+              : AdminHomePage
+                  .querySnapshot1.documents[0].data[email.replaceAll('.', ' ')];
         } else {
           AdminHomePage.attended = false;
         }
@@ -133,22 +136,25 @@ class _MyAdminHomePageState extends State<MyAdminHomePage> {
             AdminHomePage.lat = position.latitude.toString();
             AdminHomePage.long = position.longitude.toString();
             print(AdminHomePage.lat + ' ' + AdminHomePage.long);
-            if (_distance < 25) {
+            if (_distance < 150) {
               _db
                   .collection(DateTime.now().year.toString())
                   .document(DateTime.now().month.toString())
                   .collection(DateTime.now().day.toString())
                   .document("Events")
-                  .updateData({email.replaceAll('.', ' ') : true});
+                  .setData({email.replaceAll('.', ' '): true}, merge: true);
               AdminHomePage().getAttendsList(DateTime.now()).then((results) {
                 setState(() {
                   AdminHomePage.querySnapshot1 = results;
                   if (AdminHomePage.querySnapshot1.documents.isNotEmpty) {
                     AdminHomePage.attended = (AdminHomePage
-                                .querySnapshot1.documents[0].data[email.replaceAll('.', ' ')] ==
+                                .querySnapshot1
+                                .documents[0]
+                                .data[email.replaceAll('.', ' ')] ==
                             null)
                         ? false
-                        : AdminHomePage.querySnapshot1.documents[0].data[email.replaceAll('.', ' ')];
+                        : AdminHomePage.querySnapshot1.documents[0]
+                            .data[email.replaceAll('.', ' ')];
                   } else {
                     AdminHomePage.attended = false;
                   }
@@ -156,17 +162,17 @@ class _MyAdminHomePageState extends State<MyAdminHomePage> {
               });
             } else {
               Fluttertoast.showToast(
-                            msg: 'You are not in the office!',
-                            toastLength: Toast.LENGTH_LONG,
-                            gravity: ToastGravity.BOTTOM,
-                            timeInSecForIos: 3,
-                            backgroundColor: Colors.red[100],
-                            textColor: Colors.white,
-                            fontSize: 16.0);
+                  msg: 'You are not in the office!',
+                  toastLength: Toast.LENGTH_LONG,
+                  gravity: ToastGravity.BOTTOM,
+                  timeInSecForIos: 3,
+                  backgroundColor: Colors.red[100],
+                  textColor: Colors.white,
+                  fontSize: 16.0);
             }
           });
         });
-    //Attendance Content
+
     AdminEmployeePage().getDriversList().then((results) {
       setState(() {
         AdminEmployeePage.querySnapshot = results;
@@ -349,8 +355,8 @@ class _MyAdminHomePageState extends State<MyAdminHomePage> {
                 DrawerHeader(
                   child: Center(
                       child: Column(children: <Widget>[
-                    Image.network(
-                      "https://firebasestorage.googleapis.com/v0/b/employee-management-syst-530eb.appspot.com/o/EMS_main.jpg?alt=media&token=1a376682-2d66-42ba-8d91-a1681f24c29f",
+                    Image.asset(
+                      "assets/icon/logo.jpg",
                       color: Colors.deepPurpleAccent[200],
                       colorBlendMode: BlendMode.darken,
                       width: 100,

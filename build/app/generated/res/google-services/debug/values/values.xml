@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">253051975234-589nkfd6p40m3i44jgelh6v7gh9epq4m.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://employee-management-syst-530eb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">253051975234</string>
+    <string name="google_api_key" translatable="false">AIzaSyDquAfoZX8i-cIYHIXzc_1O6pddkc5v4AY</string>
+    <string name="google_app_id" translatable="false">1:253051975234:android:7431cd07f26df3f0399fdb</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDquAfoZX8i-cIYHIXzc_1O6pddkc5v4AY</string>
+    <string name="google_storage_bucket" translatable="false">employee-management-syst-530eb.appspot.com</string>
+    <string name="project_id" translatable="false">employee-management-syst-530eb</string>
+</resources>

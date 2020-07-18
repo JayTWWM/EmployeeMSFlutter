@@ -5,8 +5,8 @@ import 'package:table_calendar/table_calendar.dart';
 class AdminHomePage {
   static String lat = "";
   static String long = "";
-  static double long_admin = 72.8589488;
-  static double lat_admin = 19.2236949;
+  static double long_admin = 72.8594865;
+  static double lat_admin = 19.2243674;
   
   static IconButton iconButton;
 
@@ -143,7 +143,7 @@ class AdminHomePage {
     if (querySnapshot != null) {
       return Center(
           child: Container(
-              padding: EdgeInsets.fromLTRB(20, 25, 10, 10),
+              padding: EdgeInsets.fromLTRB(10, 25, 10, 10),
               child: Column(children: <Widget>[
                 RichText(
                     overflow: TextOverflow.fade,

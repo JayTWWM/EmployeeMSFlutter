@@ -63,8 +63,8 @@ class AdminEmployeePage {
           child: Card(
               color: Colors.deepPurpleAccent[200],
               elevation: 0,
-              child: Image.network(
-                picLink,
+              child: Image.asset(
+                "assets/icon/logo.jpg",
                 color: Colors.deepPurpleAccent[200],
                 colorBlendMode: BlendMode.darken,
                 width: 150,
