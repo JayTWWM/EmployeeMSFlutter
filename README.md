@@ -1,3 +1,5 @@
-# employee_management_system
+<H1> Employee Management System</H1>
 
-An employee management system for every organisation made in flutter!
+<img src="./assets/icon/logo.jpg">
+
+<H2>An employee management system for every organisation made in flutter!</H2>

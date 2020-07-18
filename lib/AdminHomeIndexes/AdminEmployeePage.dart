@@ -52,7 +52,7 @@ class AdminEmployeePage {
 
   static Widget imager(picLink) {
     if (picLink ==
-        "https://firebasestorage.googleapis.com/v0/b/employee-management-syst-530eb.appspot.com/o/EMS_main.jpg?alt=media&token=1a376682-2d66-42ba-8d91-a1681f24c29f") {
+        "{default black logo link}") {
       return Container(
           decoration: BoxDecoration(
               border: Border.all(

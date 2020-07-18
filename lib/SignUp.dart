@@ -19,7 +19,7 @@ class _MySignUpPageState extends State<MySignUpPage> {
   String email;
   String password;
   String picLink =
-      "https://firebasestorage.googleapis.com/v0/b/employee-management-syst-530eb.appspot.com/o/EMS_main.jpg?alt=media&token=1a376682-2d66-42ba-8d91-a1681f24c29f";
+      "{Default black logo image link}";
   bool isAdmin = false;
 
   AuthResult result;
